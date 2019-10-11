@@ -1,1 +1,3 @@
 Running Json Server: json-server --watch employees.json --port 8000
+
+npm install json-server
