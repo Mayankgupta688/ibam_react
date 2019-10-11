@@ -1,0 +1,18 @@
+{
+    "employees": [{
+        "lastName": "Gupta",
+        "firstName": "Mayank",
+        "email": "mayankgupta688@gmail.com",
+        "Website": "www.learn-javascript.in"
+    }, {
+        "lastName": "Bhandari",
+        "firstName": "Meha",
+        "email": "mayankgupta688@gmail.com",
+        "Website": "www.learn-javascript.in"
+    }, {
+        "lastName": "Gupta",
+        "firstName": "Anshul",
+        "email": "mayankgupta688@gmail.com",
+        "Website": "www.learn-javascript.in"
+    }]
+}
