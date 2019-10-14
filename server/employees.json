@@ -14,5 +14,21 @@
         "firstName": "Anshul",
         "email": "mayankgupta688@gmail.com",
         "Website": "www.learn-javascript.in"
+    }],
+    "roles": [{
+        "roleName": "User",
+        "firstName": "Mayank",
+        "email": "mayankgupta688@gmail.com",
+        "Website": "www.learn-javascript.in"
+    }, {
+        "roleName": "Creator",
+        "firstName": "Meha",
+        "email": "mayankgupta688@gmail.com",
+        "Website": "www.learn-javascript.in"
+    }, {
+        "roleName": "Admin",
+        "firstName": "Anshul",
+        "email": "mayankgupta688@gmail.com",
+        "Website": "www.learn-javascript.in"
     }]
 }

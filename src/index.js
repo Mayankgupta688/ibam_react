@@ -1,12 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import HomeComponent from "./components/home";
-import ApplicationHeaderComponent from "./components/applicationHeader";
+import ApplicationComponent from "./components/applicationComponent";
 
 ReactDOM.render((
     <>
-        <ApplicationHeaderComponent></ApplicationHeaderComponent>
-        <HomeComponent></HomeComponent>
+        <ApplicationComponent></ApplicationComponent>
     </>
 ), document.getElementById("root"));
