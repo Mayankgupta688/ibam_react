@@ -17,12 +17,13 @@ code {
   }
 
   .addButton {
+    float: right;
+    margin: auto;
+    text-align: center;
+    padding-top: 5px;
     height: 2rem;
     min-width: 7.5rem;
-    padding-left: .5rem;
-    padding-right: .5rem;
     border: 0;
-    margin: .5rem;
     cursor: pointer;
     font-family: 'Source Sans Pro',sans-serif;
     font-style: normal;

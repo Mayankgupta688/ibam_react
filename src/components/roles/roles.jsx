@@ -2,6 +2,7 @@ import React from "react";
 import $ from 'jquery';
 import tablesorter from 'tablesorter';
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class RolesComponent extends React.Component {
 
@@ -24,7 +25,7 @@ export default class RolesComponent extends React.Component {
     render() {
         var ouputData = this.state.roles.map((user) => {
             return (
-                <tr>
+                <tr key={user.roleName}>
                     <td>{user.roleName}</td>
                     <td>{user.firstName}</td>
                     <td>{user.email}</td>
@@ -48,6 +49,11 @@ export default class RolesComponent extends React.Component {
                         {ouputData}
                     </tbody>
                 </table>}
+
+                <div style={{"width": "100%"}}>
+                    <Link style={{"float": "right", "marginRight": "10px"}} id="viewGroupsUsersMenu" className="addButton" to="/addRoles">Add Roles</Link>
+                </div>
+
             </>
         )
     }

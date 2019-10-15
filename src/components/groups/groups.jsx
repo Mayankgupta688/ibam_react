@@ -24,7 +24,7 @@ export default class GroupsComponent extends React.Component {
     render() {
         var ouputData = this.state.employees.map((user) => {
             return (
-                <tr>
+                <tr key={user.firstName}>
                     <td>{user.lastName}</td>
                     <td>{user.firstName}</td>
                     <td>{user.email}</td>
@@ -50,7 +50,7 @@ export default class GroupsComponent extends React.Component {
                 </table>}
 
                 <div style={{"width": "100%"}}>
-                    <input style={{"float": "right", "marginRight": "10px"}} type="button" class="addButton" value="Add Roles" />
+                    <input style={{"float": "right", "marginRight": "10px"}} type="button" className="addButton" value="Add Groups" />
                 </div>
             </>
         )
