@@ -1,7 +1,23 @@
 import React from 'react';
 import '../styles/headerTab.css';
+import { Link } from "react-router-dom";
 
 export default class HeaderTabComponent extends React.Component {
+
+
+    constructor() {
+        super();
+        this.state = {
+            selectedTab: "editRolesUsersMenu"
+        }
+    }
+
+    updateSelected = (selectedValue) => {
+        this.setState({
+            selectedTab: selectedValue
+        })
+    }
+
     render() {
             return (
                 <div class="headerTab">
@@ -67,14 +83,16 @@ export default class HeaderTabComponent extends React.Component {
                         </li>
                     </ul>
                     <ul>
-                        <li class="current">
-                            <a id="editRolesUsersMenu" href>Edit Roles</a>
+                        <li className={(this.state.selectedTab === 'editRolesUsersMenu') ? "current": ""}>
+                            <Link onClick={() => this.updateSelected("editRolesUsersMenu")} id="editRolesUsersMenu" to="/">Edit Roles</Link>
                         </li>
-                        <li>
-                            <a id="viewGroupsUsersMenu" href>View Groups</a>
+                        <li className={(this.state.selectedTab === 'viewGroupsUsersMenu') ? "current": ""}>
+                            <Link onClick={() => this.updateSelected("viewGroupsUsersMenu")} id="viewGroupsUsersMenu" to="/about">View Groups</Link>
                         </li>
                     </ul>
                 </div>
+
+
         );
     }
 }

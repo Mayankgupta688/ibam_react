@@ -34,19 +34,21 @@ export default class RolesComponent extends React.Component {
         });
 
         return (
-            <table id="myTable" className="tablesorter">
-                <thead>
-                    <tr>
-                    <th>Role Name</th>
-                    <th>First Name</th>
-                    <th>Email</th>
-                    <th>Website</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {ouputData}
-                </tbody>
-            </table>
+            <>
+                {ouputData.length && <table id="myTable" className="tablesorter">
+                    <thead>
+                        <tr>
+                        <th>Role Name</th>
+                        <th>First Name</th>
+                        <th>Email</th>
+                        <th>Website</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {ouputData}
+                    </tbody>
+                </table>}
+            </>
         )
     }
 }
