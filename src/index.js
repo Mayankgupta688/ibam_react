@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import i18n from "i18next";
-import tranlations from "./translation/translations";
+import tranlations from "./translator/translations";
+import "./styles/index.css"
 
 import ApplicationComponent from "./components/applicationComponent";
 import { initReactI18next } from "react-i18next";
