@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/headerTab.css';
+import '../../styles/headerTab.css';
 import { Link } from "react-router-dom";
 
 export default class HeaderTabComponent extends React.Component {
@@ -87,7 +87,7 @@ export default class HeaderTabComponent extends React.Component {
                             <Link onClick={() => this.updateSelected("editRolesUsersMenu")} id="editRolesUsersMenu" to="/">Edit Roles</Link>
                         </li>
                         <li className={(this.state.selectedTab === 'viewGroupsUsersMenu') ? "current": ""}>
-                            <Link onClick={() => this.updateSelected("viewGroupsUsersMenu")} id="viewGroupsUsersMenu" to="/about">View Groups</Link>
+                            <Link onClick={() => this.updateSelected("viewGroupsUsersMenu")} id="viewGroupsUsersMenu" to="/groups">View Groups</Link>
                         </li>
                     </ul>
                 </div>

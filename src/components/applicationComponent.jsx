@@ -1,8 +1,8 @@
 import React from "react";
 
-import HomeComponent from "./home";
-import RolesComponent from "./roles";
-import ApplicationHeaderComponent from "./applicationHeader";   
+import GroupsComponent from "./groups/groups";
+import RolesComponent from "./roles/roles";
+import ApplicationHeaderComponent from "./header/applicationHeader";   
 
 import { BrowserRouter, Route } from "react-router-dom";
 
@@ -15,8 +15,8 @@ export default class ApplicationComponent extends React.Component {
                 <ApplicationHeaderComponent></ApplicationHeaderComponent>
                 <div>
                     <div style={{"margin": "10px"}}>
-                        <Route exact path="/" component={HomeComponent}></Route>
-                        <Route exact path="/about" component={RolesComponent}></Route>
+                        <Route exact path="/" component={GroupsComponent}></Route>
+                        <Route exact path="/groups" component={RolesComponent}></Route>
                     </div>
                 </div>
             

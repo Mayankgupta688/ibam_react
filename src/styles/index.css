@@ -15,4 +15,22 @@ code {
     color: #000;
     display: block;
   }
+
+  .addButton {
+    height: 2rem;
+    min-width: 7.5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    border: 0;
+    margin: .5rem;
+    cursor: pointer;
+    font-family: 'Source Sans Pro',sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: .8rem;
+    text-decoration: none;
+    background-color: #00a5e6;
+    color: #fff;
+    box-shadow: 0 3px 6px rgba(255,255,255,.16), 0 3px 6px rgba(255,255,255,.23);
+  }
   

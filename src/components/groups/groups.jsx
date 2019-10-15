@@ -3,7 +3,7 @@ import $ from 'jquery';
 import tablesorter from 'tablesorter';
 import axios from "axios";
 
-export default class HomeComponent extends React.Component {
+export default class GroupsComponent extends React.Component {
 
     constructor() {
         super();
@@ -48,6 +48,10 @@ export default class HomeComponent extends React.Component {
                         {ouputData}
                     </tbody>
                 </table>}
+
+                <div style={{"width": "100%"}}>
+                    <input style={{"float": "right", "marginRight": "10px"}} type="button" class="addButton" value="Add Roles" />
+                </div>
             </>
         )
     }
