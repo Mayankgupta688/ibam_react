@@ -16,6 +16,7 @@ export default class ApplicationComponent extends React.Component {
                 <ApplicationHeaderComponent></ApplicationHeaderComponent>
                 <div>
                     <div style={{"margin": "10px"}}>
+                        <Route exact path="/" component={RolesComponent}></Route>
                         <Route exact path="/roles" component={RolesComponent}></Route>
                         <Route exact path="/groups" component={GroupsComponent}></Route>
                         <Route exact path="/addRoles" component={AddRolesComponent}></Route>
