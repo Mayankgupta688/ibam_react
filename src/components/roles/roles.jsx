@@ -29,13 +29,9 @@ export default class RolesComponent extends React.Component {
     }
 
     editRole(roleId) {
-        alert(roleId);
-
         this.setState({
             roles: this.state.roles.filter()
         })
-
-
     }
 
     deleteRole(roleId) {
@@ -48,42 +44,52 @@ export default class RolesComponent extends React.Component {
         })
     }
 
-    render() {
-        const isAddRole = this.state.isAddRole;
-        var ouputData = this.state.roles.map((user) => {
-            return (
-                <tr key={user.id}>
-                     <td>
-                        <div style={{"white-space": "nowrap", "width": "134px"}}>                      
-                            <i name="edit_roles" onClick={() => this.editRole(user.id)}  className="sprite-edit-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
-                            <i name="delete_roles" onClick={() => this.deleteRole(user.id)} className="sprite-delete-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
-                        </div>
-                    </td>
-                    <td>{user.authority}</td>
-                </tr>
-            )
-        });
+    createTableData() {
 
-        return (
-            <>
-                {ouputData.length && <table id="myTable" className="tablesorter">
+        if(this.state.roles.length) {
+            return (
+                <table id="myTable" className="tablesorter">
                     <thead>
                         <tr>
-                        <th> </th>
-                        <th>Role Name</th>
+                            <th>Actions</th>
+                            <th>Role Name</th>
                         </tr>
                     </thead>
+            
                     <tbody>
-                        {ouputData}
+                        {this.state.roles.map((user) => {
+                            return (
+                                <tr key={user.id}>
+                                    <td>
+                                        <div style={{"white-space": "nowrap", "width": "134px"}}>                      
+                                            <i name="edit_roles" onClick={() => this.editRole(user.id)}  className="sprite-edit-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
+                                            <i name="delete_roles" onClick={() => this.deleteRole(user.id)} className="sprite-delete-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
+                                        </div>
+                                    </td>
+                                    <td>{user.authority}</td>
+                                </tr>
+                            )
+                        })}
                     </tbody>
-                </table>}
+                </table>
+            )
+        } else {
+            return null;
+        }
+    }
 
-                <div style={{"width": "100%"}}>
-                    <AddRolesComponent addRole={this.state.isAddRole} />                
+    render() {
+        return (
+            <>
+                {this.createTableData()}
+
+                <div style={{"width": "100%"}}>     
                     <button style={{"float": "right", "marginRight": "10px"}} id="addRole" className="addButton" onClick={this.handleAddRowClick}>
-                       {isAddRole ? 'Save' : 'Add Role'}
+                       {this.state.isAddRole ? 'Save' : 'Add Role'}
                     </button>
                 </div>
+
+                <AddRolesComponent addRole={this.state.isAddRole} />           
 
             </>
         )

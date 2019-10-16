@@ -25,6 +25,12 @@ export default class GroupsComponent extends React.Component {
         var ouputData = this.state.employees.map((user) => {
             return (
                 <tr key={user.firstName}>
+                    <td>
+                        <div style={{"white-space": "nowrap", "width": "134px"}}>                      
+                            <i name="edit_roles" onClick={() => this.editRole(user.firstName)}  className="sprite-edit-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
+                            <i name="delete_roles" onClick={() => this.deleteRole(user.firstName)} className="sprite-delete-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
+                        </div>
+                    </td>
                     <td>{user.lastName}</td>
                     <td>{user.firstName}</td>
                     <td>{user.email}</td>
@@ -38,10 +44,11 @@ export default class GroupsComponent extends React.Component {
                 {ouputData.length && <table id="myTable" className="tablesorter">
                     <thead>
                         <tr>
-                        <th>Last Name</th>
-                        <th>First Name</th>
-                        <th>Email</th>
-                        <th>Website</th>
+                            <th>Actions</th>
+                            <th>Last Name</th>
+                            <th>First Name</th>
+                            <th>Email</th>
+                            <th>Website</th>
                         </tr>
                     </thead>
                     <tbody>
