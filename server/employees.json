@@ -16,19 +16,41 @@
         "Website": "www.learn-javascript.in"
     }],
     "roles": [{
-        "roleName": "User",
-        "firstName": "Mayank",
-        "email": "mayankgupta688@gmail.com",
-        "Website": "www.learn-javascript.in"
+        "id": "2e59a412-b6c7-47b6-9400-b8c7aba502b0",
+        "authority": "BUSINESS_UNIT_REQUESTER"
     }, {
-        "roleName": "Creator",
-        "firstName": "Meha",
-        "email": "mayankgupta688@gmail.com",
-        "Website": "www.learn-javascript.in"
+        "id": "FEBAD710-69EB-45B5-8A03-C671D8554E2F",
+        "authority": "ROLE_ADMIN"
     }, {
-        "roleName": "Admin",
-        "firstName": "Anshul",
-        "email": "mayankgupta688@gmail.com",
-        "Website": "www.learn-javascript.in"
+        "id": "6c8c74ba-51f3-45f6-b266-f87782bb995f",
+        "authority": "ROLE_AUTHORIZED_SIGNER"
+    },
+    {
+        "id": "8EE5CA03-6C3F-431B-B448-328928C0C017",
+        "authority": "ROLE_BANK_ADMINISTRATOR"
+    },
+    {
+        "id": "50F47D25-E913-49A4-B5F6-1E7998604BF6",
+        "authority": "ROLE_BFA"
+    },
+    {
+        "id": "3F13B210-290E-4636-A4C4-63F0F2F50F1A",
+        "authority": "ROLE_BFA_EDIT_STATEMENTS"
+    },
+    {
+        "id": "F49F3887-B379-4E06-BBC4-FA7F1C2E3201",
+        "authority": "ROLE_PROCESSOR"
+    },
+    {
+        "id": "65B00960-57D9-4B0E-9DB4-578149C21B61",
+        "authority": "ROLE_REQUESTER"
+    },
+    {
+        "id": "0047C3F8-A8AD-4020-B11F-F9CAB07CFC5B",
+        "authority": "ROLE_REVIEWER"
+    },
+    {
+        "id": "F9F8814D-018B-41B4-806E-4D90A968DCAF",
+        "authority": "ROLE_USER"
     }]
 }

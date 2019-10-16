@@ -1,0 +1,27 @@
+.sprite-edit-16px {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    min-width: 16px;
+    width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    height: 16px;
+    max-height: 16px;
+    position: relative;
+    background-image: url("../images/edit.svg");
+}
+
+.sprite-delete-16px {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    min-width: 16px;
+    width: 16px;
+    max-width: 16px;
+    min-height: 16px;
+    height: 16px;
+    max-height: 16px;
+    position: relative;
+    background-image: url("../images/delete.svg");
+}
