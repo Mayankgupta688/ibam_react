@@ -3,7 +3,6 @@ import $ from 'jquery';
 import tablesorter from 'tablesorter';
 import '../../styles/roles.css';
 import axios from "axios";
-import { Link } from "react-router-dom";
 import AddRolesComponent from "./addRoles";
 
 export default class RolesComponent extends React.Component {
@@ -29,6 +28,26 @@ export default class RolesComponent extends React.Component {
         this.setState(state => ({isAddRole: !this.state.isAddRole}));
     }
 
+    editRole(roleId) {
+        alert(roleId);
+
+        this.setState({
+            roles: this.state.roles.filter()
+        })
+
+
+    }
+
+    deleteRole(roleId) {
+        var deletedList = this.state.roles.filter((role) => {
+            return role.id !== roleId;
+        });
+
+        this.setState({
+            roles: [...deletedList]
+        })
+    }
+
     render() {
         const isAddRole = this.state.isAddRole;
         var ouputData = this.state.roles.map((user) => {
@@ -36,12 +55,8 @@ export default class RolesComponent extends React.Component {
                 <tr key={user.id}>
                      <td>
                         <div style={{"white-space": "nowrap", "width": "134px"}}>                      
-                            <a name="edit_" href="/">
-                                <div className="sprite-edit-16px" id="editIcon.img" title="Edit" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></div>
-                            </a>
-                            <a name="delete_" href="/">
-                                <div className="sprite-delete-16px" id="deleteIcon.img" title="Delete" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></div>
-                            </a>
+                            <i name="edit_roles" onClick={() => this.editRole(user.id)}  className="sprite-edit-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
+                            <i name="delete_roles" onClick={() => this.deleteRole(user.id)} className="sprite-delete-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
                         </div>
                     </td>
                     <td>{user.authority}</td>
