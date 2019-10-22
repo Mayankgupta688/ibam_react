@@ -95,12 +95,19 @@ export default class RolesComponent extends React.Component {
     }
 
     editUserRole = (initialRoleName, newRoleName) => {
+
+        var deletedList = this.state.roles.map((role) => {
+            if(role.authority === initialRoleName) {
+                role.authority = newRoleName;
+            }
+            return role;
+        });
+
         this.setState({
             selectedRole: selectedRole,
             roleSelectedToEdit: selectedRole,
             isEditRole: true
         });
-
     }
 
     render() {
