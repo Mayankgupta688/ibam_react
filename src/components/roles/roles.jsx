@@ -4,6 +4,7 @@ import tablesorter from 'tablesorter';
 import '../../styles/roles.css';
 import axios from "axios";
 import AddRolesComponent from "./addRoles";
+import EditRoleComponent from "./editRole";
 
 export default class RolesComponent extends React.Component {
 
@@ -11,7 +12,10 @@ export default class RolesComponent extends React.Component {
         super();
         this.state = {
             roles: [],
-            isAddRole : false
+            isAddRole : false,
+            isEditRole: false,
+            selectedRole: "",
+            roleSelectedToEdit: ""
         }
     }
 
@@ -25,13 +29,9 @@ export default class RolesComponent extends React.Component {
     }
 
     handleAddRowClick = () => {
-        this.setState(state => ({isAddRole: !this.state.isAddRole}));
-    }
-
-    editRole(roleId) {
         this.setState({
-            roles: this.state.roles.filter()
-        })
+            isAddRole: !this.state.isAddRole
+        });
     }
 
     deleteRole(roleId) {
@@ -62,7 +62,7 @@ export default class RolesComponent extends React.Component {
                                 <tr key={user.id}>
                                     <td>
                                         <div style={{"white-space": "nowrap", "width": "134px"}}>                      
-                                            <i name="edit_roles" onClick={() => this.editRole(user.id)}  className="sprite-edit-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
+                                            <i name="edit_roles" onClick={() => this.editUserRole(user.authority)}  className="sprite-edit-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
                                             <i name="delete_roles" onClick={() => this.deleteRole(user.id)} className="sprite-delete-16px" style={{"display": "inline-flex", "margin-right" : "2px" , "margin-left": "2px", "margin-top": "2px"}}></i>
                                         </div>
                                     </td>
@@ -78,18 +78,42 @@ export default class RolesComponent extends React.Component {
         }
     }
 
+    addUserRole = (addUserRole) => {
+        this.setState({
+            roles: [
+                {
+                    "id": "2e59a412-b6c7-47b6-9400-b8c7aba502b0" + addUserRole,
+                    "authority": addUserRole.toUpperCase()
+                },
+                ...this.state.roles
+            ]
+        }, () => {
+            this.setState({
+                isAddRole: false
+            });
+        })
+    }
+
+    editUserRole = (initialRoleName, newRoleName) => {
+        this.setState({
+            selectedRole: selectedRole,
+            roleSelectedToEdit: selectedRole,
+            isEditRole: true
+        });
+
+    }
+
     render() {
         return (
             <>
                 {this.createTableData()}
 
                 <div style={{"width": "100%"}}>     
-                    <button style={{"float": "right", "marginRight": "10px"}} id="addRole" className="addButton" onClick={this.handleAddRowClick}>
-                       {this.state.isAddRole ? 'Save' : 'Add Role'}
-                    </button>
+                    {!this.state.isAddRole && <button style={{"float": "right", "marginRight": "10px"}} id="addRole" className="addButton" onClick={this.handleAddRowClick}>ADD ROLE</button>}
                 </div>
 
-                <AddRolesComponent addRole={this.state.isAddRole} />           
+                <AddRolesComponent addRole={this.state.isAddRole} addUserRole={this.addUserRole} />    
+                <EditRoleComponent editRole={this.state.isEditRole} selectedRole={this.state.selectedRole} editUserRole={this.editUserRole} />           
 
             </>
         )
