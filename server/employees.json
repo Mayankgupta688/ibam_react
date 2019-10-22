@@ -52,5 +52,27 @@
     {
         "id": "F9F8814D-018B-41B4-806E-4D90A968DCAF",
         "authority": "ROLE_USER"
+    }],
+    "groups": [{
+        "id": "2e59a412-b6c7-47b6-9400-b8c7aba502b0",
+        "name": "Mayank Gupta",
+        "email": "mayank.gupta@iongroup.com",
+        "role": "ROLE_REQUESTER"
+    }, {
+        "id": "2e59a412-b6c7-47b6-9400-b8c7aba502b0",
+        "name": "Administrative User",
+        "email": "bluedog.bankadmin@wallstreetsystems.com",
+        "role": "ROLE_REQUESTER"
+    }, {
+        "id": "2e59a412-b6c7-47b6-9400-b8c7aba502b0",
+        "name": "eBAM AuthorizedSigner",
+        "email": "bluedog.authorizedsigner@wallstreetsystems.com",
+        "role": "ROLE_REQUESTER"
+    },
+    {
+        "id": "2e59a412-b6c7-47b6-9400-b8c7aba502b0",
+        "name": "eBAM BankRequester",
+        "email": "bluedog.bankrequester@wallstreetsystems.com",
+        "role": "ROLE_USER"
     }]
 }
