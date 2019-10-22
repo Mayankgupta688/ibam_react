@@ -104,9 +104,8 @@ export default class RolesComponent extends React.Component {
         });
 
         this.setState({
-            selectedRole: selectedRole,
-            roleSelectedToEdit: selectedRole,
-            isEditRole: true
+            isEditRole: false,
+            roles: [...deletedList]
         });
     }
 
