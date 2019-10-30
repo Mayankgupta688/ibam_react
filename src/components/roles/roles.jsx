@@ -20,7 +20,7 @@ export default class RolesComponent extends React.Component {
     }
 
     componentDidMount() {
-        axios.get(`http://localhost:8000/roles`).then(res => {
+        axios.get('http://localhost:8000/roles').then(res => {
             this.setState({
                 roles: res.data
             });
