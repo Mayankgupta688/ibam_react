@@ -1,0 +1,35 @@
+.ibam-application-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ibam-header {
+    flex-grow: 0;
+}
+
+.ibam-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.ibam-groups {
+    height: 100%;
+    width: 100%;
+}
+
+.ibam-groups iframe{
+    height: 100%;
+    width: 100%;
+}
+
+.frame-container {
+    height: 100%;
+    width: 100%;
+}
+
+.frame-container iframe{
+    height: 100%;
+    width: 100%;
+}

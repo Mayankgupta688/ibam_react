@@ -111,17 +111,9 @@ export default class RolesComponent extends React.Component {
 
     render() {
         return (
-            <>
-                {this.createTableData()}
-
-                <div style={{"width": "100%"}}>     
-                    {!this.state.isAddRole && <button style={{"float": "right", "marginRight": "10px"}} id="addRole" className="addButton" onClick={this.handleAddRowClick}>ADD ROLE</button>}
-                </div>
-
-                <AddRolesComponent addRole={this.state.isAddRole} addUserRole={this.addUserRole} />    
-                <EditRoleComponent editRole={this.state.isEditRole} selectedRole={this.state.selectedRole} editUserRole={this.editUserRole} />           
-
-            </>
+            <div className="frame-container">
+                <iframe src="https://10.0.75.2/scc/administration/Roles.action" />
+            </div>
         )
     }
 }

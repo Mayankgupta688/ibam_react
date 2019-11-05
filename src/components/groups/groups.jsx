@@ -61,9 +61,9 @@ export default class GroupsComponent extends React.Component {
 
     render() {
         return (
-            <>
-                {this.createTableData()}
-            </>
+            <div class="ibam-groups">
+                <iframe className="ibam-groups-iframe" src="https://10.0.75.2/scc/administration/Roles.action?viewUsers="></iframe>
+            </div>
         )
     }
 }
