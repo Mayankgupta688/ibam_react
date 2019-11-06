@@ -1,6 +1,6 @@
 import React from "react"
 
-export default class HomeComponent extends React.Component {
+export default class AuthorityGroupComponent extends React.Component {
     render() {
         return (
             <div className="frame-container"> 
